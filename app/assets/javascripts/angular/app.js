@@ -3,6 +3,7 @@
 
   angular.module("exampleAngularApp", [
     "ui.router",
-    "rails"
+    "rails",
+    "ngAnimate"
   ]);
 })();

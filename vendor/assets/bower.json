@@ -6,6 +6,7 @@
     "angularjs-rails-resource": "latest",
     "HTML5-Reset": "latest",
     "bootstrap-sass": "latest",
-    "angular-bootstrap": "latest"
+    "angular-bootstrap": "latest",
+    "angular-animate": "latest"
   }
 }
