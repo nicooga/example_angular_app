@@ -15,7 +15,6 @@ module ResourceController
   end
 
   def create
-    sleep 3
     self.resource = resource_class.new permitted_params
 
     handle_resource_action do
