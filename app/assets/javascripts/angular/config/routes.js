@@ -17,7 +17,7 @@
       .state("posts", {
         abstract: true,
         template: "<div ui-view></div>",
-        url: "/posts",
+        url: "/posts"
       })
         .state("posts.index", {
           url: "/",
@@ -44,6 +44,6 @@
               return Post.get($stateParams.id);
             }
           }
-        })
+        });
   }
 })();
