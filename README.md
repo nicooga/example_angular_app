@@ -4,6 +4,8 @@ Made with Rails and AngularJS on the front.
 ## Installation
 ~~~bash
 bundle install
+# create config/database.yml
+rake db:create db:migrate
 rake bower:install # install assets using bower, see ./Bowerfile
 ~~~
 
