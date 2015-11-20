@@ -1,3 +1,6 @@
 asset "angular"
 asset "angular-ui-router"
 asset "angularjs-rails-resource"
+asset "HTML5-Reset"
+asset "bootstrap-sass"
+asset "angular-bootstrap"

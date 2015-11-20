@@ -1,18 +1,21 @@
-h1 Listing Posts
+.row
+  .col-md-6.col-md-offset-3
+    .page-header
+      h1 Listing Posts
 
-ul
-  li: a ui-sref="posts.new" Create new Post
+    .actions
+      a.btn.btn-default ui-sref="posts.new" Create new Post
 
-div ng-repeat="post in postIdxCtrl.posts"
-  h2
-    | {{ post.title }}
-  small
-    | {{ post.createdAt }}
+    .panel.panel-default ng-repeat="post in postIdxCtrl.posts"
+      .panel-heading
+        h2.panel-title
+          | {{ post.title }} 
+          small
+            | {{ post.createdAt }}
 
-  div: a ui-sref="posts.edit({ id: post.id })" Edit
+          .btn-group.btn-group-xs.pull-right
+            a.btn.btn-danger ng-click="postIdxCtrl.destroy(post)" Destroy
+            a.btn.btn-primary ui-sref="posts.edit({ id: post.id })" Edit
 
-  div
-    | {{ post.body }}
-
-
-  hr ng-hide="$last"
+      .panel-body
+        | {{ post.body }}

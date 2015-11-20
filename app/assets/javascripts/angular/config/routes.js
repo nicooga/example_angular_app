@@ -16,13 +16,16 @@
 
       .state("posts", {
         abstract: true,
-        url: "/posts",
         template: "<div ui-view></div>",
+        url: "/posts",
       })
         .state("posts.index", {
           url: "/",
           templateUrl: "angular/posts/index",
-          controller: "PostIndexController as postIdxCtrl"
+          controller: "PostIndexController as postIdxCtrl",
+          resolve: {
+            posts: function(Post) { return Post.query() }
+          }
         })
         .state("posts.new", {
           url: "/new",
@@ -38,7 +41,7 @@
           controller: "PostController as postCtrl",
           resolve: {
             post: function(Post, $stateParams) {
-              return new Post.get($stateParams.id);
+              return Post.get($stateParams.id);
             }
           }
         })

@@ -1,0 +1,48 @@
+//= require "HTML5-Reset/assets/css/reset.css"
+//= require "bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+//= require "angular-bootstrap/ui-bootstrap-csp.css"
+
+html
+  height: 100%
+
+body
+  background-image: linear-gradient(to bottom right, lighten(lightgreen, 10%), lighten(wheat, 10%))
+  background-repeat: no-repeat
+  height: 100%
+
+.actions
+  margin-bottom: 15px
+
+[ui-view]
+  &.ng-enter, &.ng-leave
+    position: absolute
+    left: 0
+    right: 0
+    -webkit-transition: all .5s ease-in-out
+    -moz-transition: all .5s ease-in-out
+    -o-transition: all .5s ease-in-out
+    transition: all .5s ease-in-out
+
+  &.ng-enter
+    opacity: 0
+    -webkit-transform: scale3d(0.5, 0.5, 0.5)
+    -moz-transform: scale3d(0.5, 0.5, 0.5)
+    transform: scale3d(0.5, 0.5, 0.5)
+
+  &.ng-enter-active
+    opacity: 1
+    -webkit-transform: scale3d(1, 1, 1)
+    -moz-transform: scale3d(1, 1, 1)
+    transform: scale3d(1, 1, 1)
+
+  &.ng-leave
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+  &.ng-leave-active
+    opacity: 0
+    -webkit-transform: translate3d(100px, 0, 0)
+    -moz-transform: translate3d(100px, 0, 0)
+    transform: translate3d(100px, 0, 0)

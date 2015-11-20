@@ -1,12 +1,24 @@
-h1 Creating a new Post
+.row
+  .col-md-6.col-md-offset-3
+    .actions
+      a.btn.btn-default ui-sref="posts.index" Back to posts list
 
-form ng-submit="postCtrl.post.save()"
-  div
-    label= Post.human_attribute_name :title
-    input ng-model="postCtrl.post.title"
+    .panel.panel-default
+      .panel-heading: h1.panel-title Creating a new Post
 
-  div
-    label= Post.human_attribute_name :body
-    textarea ng-model="postCtrl.post.body"
+      form ng-submit="postCtrl.save()"
+        .panel-body
+          .form-group
+            label= Post.human_attribute_name :title
+            input.form-control[ng-model="postCtrl.post.title" required]
 
-  input type="submit" value="Save"
+          .form-group
+            label= Post.human_attribute_name :body
+            textarea.form-control[ng-model="postCtrl.post.body" required]
+
+        .panel-footer
+          input.form-control[
+            type="submit"
+            value="Save"
+            ng-disabled="postCtrl.saving"
+          ]

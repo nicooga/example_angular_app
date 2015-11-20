@@ -3,6 +3,9 @@
   "dependencies": {
     "angular": "latest",
     "angular-ui-router": "latest",
-    "angularjs-rails-resource": "latest"
+    "angularjs-rails-resource": "latest",
+    "HTML5-Reset": "latest",
+    "bootstrap-sass": "latest",
+    "angular-bootstrap": "latest"
   }
 }
