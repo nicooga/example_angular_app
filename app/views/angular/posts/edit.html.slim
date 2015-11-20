@@ -1,0 +1,12 @@
+h1 Creating a new Post
+
+form ng-submit="postCtrl.post.save()"
+  div
+    label= Post.human_attribute_name :title
+    input ng-model="postCtrl.post.title"
+
+  div
+    label= Post.human_attribute_name :body
+    textarea ng-model="postCtrl.post.body"
+
+  input type="submit" value="Save"
